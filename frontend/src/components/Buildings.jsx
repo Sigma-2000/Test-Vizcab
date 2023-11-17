@@ -1,13 +1,8 @@
 import React from "react";
-
-
-function App() {
-
+export default function Buildings(){
     return (
         <div>
-            <p>Hello Test</p>
+            <p>building</p>
         </div>
     );
 }
-
-export default App;
