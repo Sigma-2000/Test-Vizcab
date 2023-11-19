@@ -1,0 +1,67 @@
+{
+  "data": [
+      {
+          "id": 1,
+          "name": "Nicolas-Lebsack",
+          "surface": 4193,
+          "carbon_emission": 172256,
+          "address": "08 Vera Pass",
+          "postcode": 15489,
+          "city": "Saint John’s"
+      },
+      {
+          "id": 2,
+          "name": "Rosenbaum-Conn",
+          "surface": 3966,
+          "carbon_emission": 180683,
+          "address": "91 Thompson Crossing",
+          "postcode": 15489,
+          "city": "Xinxu"
+      },
+      {
+          "id": 3,
+          "name": "Erdman LLC",
+          "surface": 4526,
+          "carbon_emission": 464710,
+          "address": "33749 Goodland Junction",
+          "postcode": "141540",
+          "city": "Povarovo"
+      },
+      {
+          "id": 4,
+          "name": "Schuppe LLC",
+          "surface": 3191,
+          "carbon_emission": 153715,
+          "address": "9 Homewood Crossing",
+          "postcode": "473 01",
+          "city": "Nový Bor"
+      },
+      {
+          "id": 5,
+          "name": "Schaden LLC",
+          "surface": 2924,
+          "carbon_emission": 338768,
+          "address": "01696 Dawn Circle",
+          "postcode": 15489,
+          "city": "Shijak"
+      },
+      {
+          "id": 6,
+          "name": "Ritchie LLC",
+          "surface": 4980,
+          "carbon_emission": 438074,
+          "address": "204 Erie Junction",
+          "postcode": 15489,
+          "city": "Goge"
+      },
+      {
+          "id": 7,
+          "name": "Sawayn Group",
+          "surface": 1762,
+          "carbon_emission": 383443,
+          "address": "82520 Blackbird Place",
+          "postcode": 15489,
+          "city": "La Unión"
+      }
+    ]
+    }
