@@ -1,0 +1,48 @@
+.buildings-vue-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buildings-vue-card{
+  position: relative;
+  background-color: #bee7e5;
+  padding: 10px;
+  height: 150px;
+  width: 15%; /*calc(33.33% - 10px);*/
+  margin: 10px;
+}
+
+.buildings-vue-card h2{
+  background-color: white;
+  width: fit-content;
+  padding: 5px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.buildings-vue-card p{
+  margin: 0px;
+}
+
+.buildings-vue-card button{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 10px;
+  right: 10px;
+  background-color:#22334d;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  border: 0px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 10px;
+}
+
+.buildings-vue-logo{
+  width: 1.5rem;
+  margin-right: 1px;
+
+}
