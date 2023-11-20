@@ -24,14 +24,22 @@ export default function Buildings(){
                 dataArray.map((item)  =>(
                     /*on va mapper sur tout les objets du tableau grace à leur 
                     propriété id pour las afficher*/
-                    <div key={item.id} className={`${prefix}-card`}>
+                    <div
+                        key={item.id}
+                        className={`${prefix}-card`}
+                        data-testid="buildings"
+                    >
                         <h2>{item.name}</h2>
                         <p>{item.address}</p>
-                        <p>{item.postcode}{item.city}</p>
+                        <p>{item.postcode} {item.city}</p>
                         <button>
-                            <img src="/eye.png" className={`${prefix}-logo`} 
-                                alt="eye"/>
-                            Details</button>
+                            <img
+                                src="/eye.png"
+                                className={`${prefix}-logo`}
+                                alt="eye"
+                            />
+                            Details
+                        </button>
                     </div>
                 )) 
             }
