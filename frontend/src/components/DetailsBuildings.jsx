@@ -1,11 +1,11 @@
-import React from "react";
+/*import React from "react";
 
 import datas from "../datas.json";
 import "../index.css";
 
 
 export default function DetailsBuildings(){
-    /*
+    
     const dataArray = datas.data;
     passer les datas par les props !
     const carbonM2=item.carbon_emission/item.surface
@@ -31,5 +31,5 @@ export default function DetailsBuildings(){
             //créer un fichier externe js avec opération?
             <p><-back</p>
         </div>
-    );*/
-}
+    );
+}*/
