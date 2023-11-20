@@ -27,7 +27,7 @@ export default function Buildings(){
                     <div
                         key={item.id}
                         className={`${prefix}-card`}
-                        data-testid="building"
+                        data-testid="buildings"
                     >
                         <h2>{item.name}</h2>
                         <p>{item.address}</p>
