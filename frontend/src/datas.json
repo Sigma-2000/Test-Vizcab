@@ -62,6 +62,15 @@
           "address": "82520 Blackbird Place",
           "postcode": 15489,
           "city": "La Unión"
-      }
+      },
+      {
+        "id": 8,
+        "name": "Kiehn, Abernathy and Beatty",
+        "surface": 1402,
+        "carbon_emission": 469991,
+        "address": "4105 Waxwing Road",
+        "postcode": 15489,
+        "city": "Al Aḩmadī"
+        }
     ]
     }
