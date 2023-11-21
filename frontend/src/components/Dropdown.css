@@ -1,24 +1,46 @@
-.Dropdown-vue-sort-by{
+.Dropdown-vue-sort-by {
   background-color: #f6f6f6;
-  width: 20%;
-  padding: 10px;   
   display: inline-block;
+  position: relative;
+  font-family: Arial, sans-serif;
+  margin-left: 10px;
+  padding: 10px;
 }
 
-.Dropdown-vue-label{
-  display: inline-block;
-  margin-right: 20px;
+.Dropdown-vue-label {
+  margin-right: 10px;
 }
 
-.Dropdown-vue-select{
-  border: 0;
+.Dropdown-vue-select {
+  padding: 8px 30px 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff;
   width: 200px;
-  padding: 5px;
 }
 
-.Dropdown-vue-select:focus{
- border: 0;
- outline: none;
+.Dropdown-vue-select:focus {
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.Dropdown-vue-select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Dropdown-vue-select-options {
+  display: block;
 }
 
 
