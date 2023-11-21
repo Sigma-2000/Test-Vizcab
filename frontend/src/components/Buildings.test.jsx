@@ -7,7 +7,6 @@ import Buildings from './Buildings';
 
 test('renders the Buildings component with data', () => {  
 
-    // Render the component with mock data
     const {
         getByText, queryAllByText, queryAllByTestId,
     } = render(<Buildings />);

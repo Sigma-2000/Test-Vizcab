@@ -1,23 +1,41 @@
+import PropTypes from 'prop-types';
 import React from "react";
 
 import "./Dropdown.css";
-//le css pour label ne marche pas .. alors qu'ici il fonctionne...
 
-export default function Dropdown(){
+export default function Dropdown(props){
+    const { handleChange, valueSelect } = props;
     const prefix = "Dropdown-vue";
- 
 
     return(
         <div className={`${prefix}-sort-by`} >
             <label htmlFor="sortBy"className={`${prefix}-label`}>
                 Sort By
             </label>
-            <select className={`${prefix}-select`}>
-                <option value="option1">
-                    kg eq. CO2/m2</option>
-                <option value="option2">kg eq. CO2</option>
+            <select 
+                value={valueSelect}
+                className={`${prefix}-select`} 
+                onChange={handleChange}
+            >
+                <option 
+                    value="1"
+                    className={`${prefix}-select-options`} 
+                >
+                    kg eq. CO2/m2
+                </option>
+                <option 
+                    value="2"
+                    className={`${prefix}-select-options`} 
+                >
+                    kg eq. CO2
+                </option>
             </select>
             
         </div>
     );
 }
+
+Dropdown.propTypes = {
+    handleChange: PropTypes.func,
+    valueSelect: PropTypes.string,
+};

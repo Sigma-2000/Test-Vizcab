@@ -1,33 +1,31 @@
+import PropTypes from 'prop-types';
 import React from "react";
 
-import datas from "../datas.json";
 import "../index.css";
 import "./Buildings.css";
 
-
-
-export default function Buildings(){
-    
+export default function Buildings(props){
+    const { buildings } = props;
     const prefix = "buildings-vue";
-    const dataArray = datas.data;
+    //prefix for the css
 
-    /*Accédez à la liste d'objets à partir du fichier JSON on indique 
-    que dataArray correspond à sa propriété data et donc au tableau d'objets*/
-    if (!Array.isArray(dataArray)) {
-        // Gestion de cas où datas n'est pas un tableau
+    if (!Array.isArray(buildings)) {
+        // In case where 'datas' is not an array.
         return <div>Les données ne sont pas valides.</div>;
     }
 
     return (
         <div className={`${prefix}-container`} > 
             {
-                dataArray.map((item)  =>(
-                    /*on va mapper sur tout les objets du tableau grace à leur 
-                    propriété id pour las afficher*/
+                buildings.map((item)  =>(
+                    /*mapping through all the objects in the array based 
+                    on their 'id' property to display them.*/
                     <div
                         key={item.id}
+                        //key for React 
                         className={`${prefix}-card`}
                         data-testid="buildings"
+                        //for testing the number of buildings
                     >
                         <h2>{item.name}</h2>
                         <p>{item.address}</p>
@@ -46,3 +44,7 @@ export default function Buildings(){
         </div>
     );
 }
+
+Buildings.propTypes = {
+    buildings: PropTypes.array,
+};
