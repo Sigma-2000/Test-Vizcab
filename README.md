@@ -45,6 +45,5 @@ Once the dependencies are installed, you can run the following scripts:
 
 ## Mockup
 
-For reference, you can use this mockup to develop your application:
 
 ![Alt text](image.png)
