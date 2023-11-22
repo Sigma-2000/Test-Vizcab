@@ -4,10 +4,12 @@ import React from "react";
 import "./Dropdown.css";
 
 export default function Dropdown(props){
-    const { handleChange, valueSelect } = props;
     const prefix = "Dropdown-vue";
+    //css
+    const { handleChange, valueSelect } = props;
+    //props
 
-    return(
+    return(  
         <div className={`${prefix}-sort-by`} >
             <label htmlFor="sortBy"className={`${prefix}-label`}>
                 Sort By
@@ -29,9 +31,8 @@ export default function Dropdown(props){
                 >
                     kg eq. CO2
                 </option>
-            </select>
-            
-        </div>
+            </select>  
+        </div> 
     );
 }
 
@@ -39,3 +40,4 @@ Dropdown.propTypes = {
     handleChange: PropTypes.func,
     valueSelect: PropTypes.string,
 };
+//verify the types of props

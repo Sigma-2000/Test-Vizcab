@@ -21,10 +21,3 @@ test('renders the Buildings component with data', () => {
     expect(queryAllByText('Details')).toHaveLength(8); 
 });
 
-/* test('renders a message for invalid data', () => {
-    // Render the component with invalid data (not an array)
-    const { getByText } = render(<Buildings />);
-
-    // Check if the component renders a message for invalid data
-    expect(getByText('Les données ne sont pas valides.')).toBeInTheDocument();
-}); */
