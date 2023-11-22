@@ -5,18 +5,21 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import Details from './pages/Details';
-import Home from './pages/Home';
+import DetailsBuildings from './pages/Details';
+import ErrorPage from "./pages/ErrorPage";
+import Home from './pages/home';
 import './index.css';
+
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
+        errorElement: <ErrorPage />,
     },
     {
-        path: "/details",
-        element: <Details />,
+        path: "/details/:buildingId",
+        element: <DetailsBuildings />,
     },
    
 ]);
