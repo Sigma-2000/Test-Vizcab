@@ -16,17 +16,17 @@ export default function DetailsBuildings(){
 
     const prefix = "building-details";
     let navigate = useNavigate();
+    /*get the buildingID from route/url is equal at item.id 
+    from buildings(result= string)*/
     const { buildingId } = useParams();
-    /*get the buildingID from route/url
-    is equal at item.id from buildings. 
-    we get a string ...*/
 
-    const building = datas.data.find(item => item.id === parseInt(buildingId));
     /*get the data from JSON file but when we use the API, it will be 
     not performing, so use redux or useContext will be more adpated.
     Otherwise, we search in data a match between data.id in datas.json and the
-    url buildingId. */  
-  
+    url buildingId. */
+    const building = datas.data.find(item => item.id === parseInt(buildingId));
+
+    //handle errors
     if (!building) {
         return <div>Bâtiment non trouvé.</div>;
     }
@@ -34,9 +34,9 @@ export default function DetailsBuildings(){
     const carbonEmissionPerSquareMeter = carboneCalculation(
         building.carbon_emission, building.surface,
     );
-
+    
+    // return to homepage
     function handleHomeClick() {
-        // return to homepage
         navigate(`/`);
     }
 

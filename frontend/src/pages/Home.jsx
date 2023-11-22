@@ -7,10 +7,10 @@ import datas from "../datas.json";
 import { carboneCalculation } from "../utiles";
 
 export default function Home(){
-    
-    const dataArray = datas.data;
     //import the data array in the object datas
-
+    const dataArray = datas.data;
+    
+    /*take the data to sort them per the smaller emission carbon*/
     function sortByCarbon(items) {   
         const sortedItems = [...items]; 
         return sortedItems.sort((a, b) =>{
@@ -20,8 +20,8 @@ export default function Home(){
         });  
     }
     const sortedByCarbon = sortByCarbon(dataArray);
-    /*take the data to sort them per the smaller emission carbon*/
-
+    
+    /*take the data to sort them per the smaller emission carbon/m2*/
     function sortByCarbonMeter(items) {
         const sortedItems = [...items];
         return sortedItems.sort((a, b) => {
@@ -38,16 +38,18 @@ export default function Home(){
         });          
     }
     const sortedByCarbonMeter = sortByCarbonMeter(dataArray);
-    /*take the data to sort them per the smaller emission carbon/m2*/
- 
+    
+    /*settings addEventListener and useState 
+    for listening and change the option */ 
     const [valueSelect, setValueSelect] = useState('1');
 
     function handleChange(e){
         setValueSelect(e.target.value); 
     }
-    /*settings addEventListener and useState 
-    for listening and change the option */ 
-
+    
+    /*associate the value of options at the variables of sort,
+    and pass it to a new props for sorting the buildings*/ 
+    
     function findSortedBuildings(valueSelected) {
         if (valueSelected === '1'){
             return sortedByCarbonMeter;        
@@ -55,8 +57,6 @@ export default function Home(){
             return sortedByCarbon;
         }
     }
-    /*associate the value of options at the variables of sort,
-    and pass it to a new props for sorting the buildings*/ 
     
     return(
         <div className="presentation-pages">

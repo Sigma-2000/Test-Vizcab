@@ -4,10 +4,10 @@ import React from "react";
 import "./Dropdown.css";
 
 export default function Dropdown(props){
-    const prefix = "Dropdown-vue";
     //css
-    const { handleChange, valueSelect } = props;
+    const prefix = "Dropdown-vue";
     //props
+    const { handleChange, valueSelect } = props;
 
     return(  
         <div className={`${prefix}-sort-by`} >
@@ -35,9 +35,8 @@ export default function Dropdown(props){
         </div> 
     );
 }
-
+//verify the types of props
 Dropdown.propTypes = {
     handleChange: PropTypes.func,
     valueSelect: PropTypes.string,
 };
-//verify the types of props
