@@ -1,34 +1,34 @@
-# Frontend coding test
 
-We invite you to create an application that allows visualizing all the buildings currently under construction at the national level.
+# Test Vizcab
+Test Vizcab is a web interface designed to display a list of buildings under construction. 
+Users can sort these buildings by either carbon emissions per square meter or by building surface area. 
+Clicking on a building in the list will redirect users to a page presenting its characteristics.
 
-## What we expect from you
+# Installation
+To get started with the Test Vizcab project, follow these steps:
 
--   For this test, you can use the front-end technology (language + framework if applicable) of your choice.
--   You can allocate a maximum of 1 hour and 30 minutes.
--   Write your code as if you were in a real-world situation, making sure to create robust and maintainable code.
--   This test serves as a basis for a discussion, and the methods employed are more important than the result.
--   Since this test can be a bit lengthy, the goal is not to complete all the levels but to focus on the code structure and implementation quality.
--   If you have any questions, feel free to send us a message to request clarification or explanations.
--   When you're finished, you can share your repository on Github or Gitlab with np@vizcab.io and bp@vizcab.io.
--   Please also provide us with a list of improvements you would have liked to make to your application but may not have had the time to implement.
+1.Clone the repository: git@github.com:Sigma-2000/Test-Vizcab.git
+2.Navigate to the project directory: Test-Vizcab\frontend
+3.Install the dependencies: npm install
 
-## Objectives
+# Script
+Once the dependencies are installed, you can run the following scripts:
 
--   [ ] Create a web interface displaying the list of buildings under construction.
--   [ ] Clicking on a building in the list will take you to a page that presents its characteristics.
--   [ ] Add an input for sorting buildings either by carbon emission per square meter or by building surface.
+-npm run dev: Starts the development server using Vite.
+-npm run build: Builds the project using Vite for production.
+-npm run lint: Lints JavaScript/JSX files using ESLint to ensure code quality.
+-npm run test: Executes the vitest test runner.
+-npm run coverage: Generates test coverage reports using vitest.
 
-### Bonus
-
--   [ ] Write tests to ensure the reliability of the application.
--   [ ] Add a pagination system to display buildings in batches of 10 on the same page.
-
-## How to Get Started
-
--   Clone the repository.
--   Start the backend (see README), which will provide you with the API containing the list of buildings.
--   Create the frontend application!
+# Technologies Used
+-Vite + React: Fast, opinionated web dev build tool and JavaScript library for building user interfaces.
+-React Router Dom: DOM bindings for React Router, enabling declarative routing in React applications.
+-JSX (JavaScript XML): A syntax extension for JavaScript often used with React to describe the UI.
+-CSS3: Used for styling and design purposes.
+-ESLint: A pluggable JavaScript linter for maintaining code quality.
+-React Testing Library: A testing utility for React that focuses on testing React components by simulating how users interact with the application.
+-Vitest: A test runner for Vite-powered applications, facilitating testing processes within the Vite ecosystem.
+-GitHub Actions (CI): CI/CD pipelines are set up using GitHub Actions, automating build, test, and deployment processes directly within the GitHub repository.
 
 ## Mockup
 
