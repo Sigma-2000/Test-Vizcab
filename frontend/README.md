@@ -6,7 +6,7 @@ Clicking on a building in the list will redirect users to a page presenting its 
 # Installation
 To get started with the Test Vizcab project, follow these steps:
 
-1.Clone the repository: git@github.com:Sigma-2000/Test-Vizcab.git
+1.Clone the repository: Sigma-2000/Test-Vizcab.git
 
 2.Navigate to the project directory: Test-Vizcab\frontend
 
