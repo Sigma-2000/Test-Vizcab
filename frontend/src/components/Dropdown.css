@@ -4,6 +4,7 @@
   position: relative;
   margin-left: 10px;
   padding: 10px;
+  font-size: 17px;
 }
 
 .Dropdown-vue-label {
@@ -14,7 +15,6 @@
   padding: 8px 30px 8px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 14px;
   cursor: pointer;
   background-color: #fff;
   width: 200px;
@@ -42,4 +42,12 @@
   display: block;
 }
 
-
+/*Media queries*/
+@media screen and (max-width: 768px) {
+  .Dropdown-vue-sort-by {
+    width: 80%;
+  }
+  .Dropdown-vue-label {
+    margin-right: 20px;
+  }
+}
