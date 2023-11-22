@@ -10,11 +10,12 @@ export default function Buildings(props){
     const { buildings } = props;
     //props
     let navigate = useNavigate();
+    //new useHistory
     const prefix = "buildings-vue";
     //prefix for the css
     
     useEffect(() => {
-        // Cette fonction sera exécutée lors du premier rendu du composant
+        /*Cette fonction sera exécutée lors du premier rendu du composant*/
     }, []);
 
     function handleBuildingClick() {
