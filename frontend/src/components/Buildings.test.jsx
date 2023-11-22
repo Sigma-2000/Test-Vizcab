@@ -1,8 +1,8 @@
 // Buildings.test.js
 import { render } from '@testing-library/react';
 import React from 'react';
-import { test, expect } from 'vitest';
 import { MemoryRouter } from 'react-router-dom'; // ou BrowserRouter
+import { test, expect } from 'vitest';
 
 import Buildings from './Buildings';
 
