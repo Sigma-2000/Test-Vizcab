@@ -1,43 +1,33 @@
-import axios from 'axios';
 import React, { useEffect, useState } from "react";
 import "../index.css";
 
 
 import Buildings from "../components/Buildings";
 import Dropdown from "../components/Dropdown";
+import  useApiData  from "../services/useApiData"; 
 import { sortByCarbon, sortByCarbonMeter } from "../utiles";
 
 export default function Home(){
-
     
-    const [responseData, setResponseData] = useState([]);
-
-    const fetchData= ()=>{
-        axios
-            .get('http://localhost:3000/')
-            .then((response) => {
-                console.log(response.data.data);
-                setResponseData(response.data.data);
-            })
-            .catch((error)=>{
-                console.log(error);
-            });      
-    }; 
+    const [valueSelect, setValueSelect] = useState('1');
+    const { responseData, fetchData } = useApiData();
+    /*the function return an objet with 2 properties*/
+    
+    /*Fetch API data when fetchData function changes 
+     (initial render in this case)*/
     useEffect(()=>{
-        fetchData();
-    },[]);
+        fetchData(); 
+    },[fetchData]); //add fetchData on dependencies if fecthdata change
    
-    //import the data array set with useState 
-    const dataArray = responseData;
+    /* Fetch API data when fetchData function changes 
+   (initial render in this case)*/
+    const dataArray =  responseData || []; /*Dependency to re-fetch 
+    data when fetchData changes*/
+
     /*take the data to sort them per the smaller emission carbon*/
     const sortedByCarbon = sortByCarbon(dataArray);
-    
     /*take the data to sort them per the smaller emission carbon/m2*/
     const sortedByCarbonMeter = sortByCarbonMeter(dataArray);
-    
-    /*settings addEventListener and useState 
-    for listening and change the option */ 
-    const [valueSelect, setValueSelect] = useState('1');
 
     function handleChange(e){
         setValueSelect(e.target.value); 
