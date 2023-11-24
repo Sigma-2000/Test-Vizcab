@@ -1,42 +1,38 @@
-import React, { useState } from "react";
+import axios from 'axios';
+import React, { useEffect, useState } from "react";
 import "../index.css";
+
 
 import Buildings from "../components/Buildings";
 import Dropdown from "../components/Dropdown";
-import datas from "../datas.json";
-import { carboneCalculation } from "../utiles";
+import { sortByCarbon, sortByCarbonMeter } from "../utiles";
 
 export default function Home(){
-    //import the data array in the object datas
-    const dataArray = datas.data;
+
     
+    const [responseData, setResponseData] = useState([]);
+
+    const fetchData= ()=>{
+        axios
+            .get('http://localhost:3000/')
+            .then((response) => {
+                console.log(response.data.data);
+                setResponseData(response.data.data);
+            })
+            .catch((error)=>{
+                console.log(error);
+            });      
+    }; 
+    useEffect(()=>{
+        fetchData();
+    },[]);
+   
+    //import the data array set with useState 
+    const dataArray = responseData;
     /*take the data to sort them per the smaller emission carbon*/
-    function sortByCarbon(items) {   
-        const sortedItems = [...items]; 
-        return sortedItems.sort((a, b) =>{
-            if ( a.carbon_emission < b.carbon_emission) return -1;
-            if (a.carbon_emission > b.carbon_emission) return 1;
-            return 0;  
-        });  
-    }
     const sortedByCarbon = sortByCarbon(dataArray);
     
     /*take the data to sort them per the smaller emission carbon/m2*/
-    function sortByCarbonMeter(items) {
-        const sortedItems = [...items];
-        return sortedItems.sort((a, b) => {
-            const carboneCalculationA = carboneCalculation(
-                a.carbon_emission, a.surface,
-            );
-            const carboneCalculationB = carboneCalculation(
-                b.carbon_emission, b.surface,
-            );
-              
-            if (carboneCalculationA < carboneCalculationB) return -1;
-            if (carboneCalculationA > carboneCalculationB) return 1;
-            return 0;   
-        });          
-    }
     const sortedByCarbonMeter = sortByCarbonMeter(dataArray);
     
     /*settings addEventListener and useState 
