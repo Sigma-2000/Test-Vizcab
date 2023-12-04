@@ -18,7 +18,7 @@ export default function Buildings(props){
     if (!Array.isArray(buildings)) {
         return <div>Les données ne sont pas valides.</div>;
     }
-
+     
     // Navigate on Details with ID of the buildings
     function handleBuildingClick(buildingId) {
         navigate(`/details/${buildingId}`);

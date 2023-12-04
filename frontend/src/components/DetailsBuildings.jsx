@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { 
     useNavigate,
     useParams, 
 } 
     from 'react-router-dom';
     
-import datas from "../datas.json";
+import  useApiData  from "../services/useApiData"; 
 import { carboneCalculation } from "../utiles";
 
 import "../index.css";
@@ -20,11 +20,21 @@ export default function DetailsBuildings(){
     from buildings(result= string)*/
     const { buildingId } = useParams();
 
-    /*get the data from JSON file but when we use the API, it will be 
-    not performing, so use redux or useContext will be more adpated.
+    /*get the data from the custom hook ... use Context more adapted ?
     Otherwise, we search in data a match between data.id in datas.json and the
     url buildingId. */
-    const building = datas.data.find(item => item.id === parseInt(buildingId));
+   
+    const { responseData, fetchData } = useApiData();
+    /*the function return an objet with 2 properties*/
+    
+    /*Fetch API data when fetchData function changes 
+     (initial render in this case)*/
+    useEffect(()=>{
+        fetchData(); 
+    },[fetchData]); //add fetchData on dependencies if fetch data change
+   
+    const building = responseData 
+        .find(item => item.id === parseInt(buildingId));
 
     //handle errors
     if (!building) {

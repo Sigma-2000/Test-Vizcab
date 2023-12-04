@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 
 // create a custom hook 
 export default function useApiData() {
@@ -16,14 +16,14 @@ export default function useApiData() {
                 console.log(error);
             });      
     }; 
-    
+    // Fetch data on initial render
     useEffect(() => {
         fetchData();
-    }, []); // Fetch data on initial render
+    }, []); 
 
     /*don't forget to return the data we need and the function we need 
     for home */
     return { responseData, fetchData };
 }
 
-
+//no jsx ... so js ?
